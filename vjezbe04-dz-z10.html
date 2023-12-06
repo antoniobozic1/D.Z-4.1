@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Random Brojevi</title>
+</head>
+<body>
+  <script type="text/javascript">
+    function ispisRandomBrojeva(min, max) {
+      for (var i = 0; i < 5; i++) {
+        var randomBroj = Math.random() * (max - min + 1) + min;
+        document.write(randomBroj + "<br>");
+      }
+    }
+
+    // Primjer poziva funkcije
+    ispisRandomBrojeva(10, 20); // Ispisuje pet random brojeva između 10 i 20
+  </script>
+</body>
+</html>

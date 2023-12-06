@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Anonimna Funkcija</title>
+</head>
+<body>
+  <script type="text/javascript">
+    var kvadratBroja = function(broj) {
+      if (typeof broj === 'number') {
+        return broj * broj;
+      } else {
+        return "Pogreška: ulazni argument nije broj.";
+      }
+    };
+
+    // Primjeri korištenja funkcije
+    document.write("Kvadrat 5 je: " + kvadratBroja(5) + "<br>");
+    document.write("Kvadrat 'abc' je: " + kvadratBroja('abc'));
+  </script>
+</body>
+</html>

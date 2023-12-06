@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ispis Osoba i Automobila</title>
+</head>
+<body>
+  <script type="text/javascript">
+    // Objekti osoba
+    var osoba1 = { firstName: "Marko", lastName: "Maric", age: 40, eyeColor: "black" };
+    var osoba2 = { firstName: "Ivana", lastName: "Ivic", age: 35, eyeColor: "blue" };
+    var osoba3 = { firstName: "Ana", lastName: "Anic", age: 30, eyeColor: "green" };
+
+    // Objekti automobila
+    var auto1 = { marka: "Toyota", model: "Corolla", godina: 2020, boja: "crvena" };
+    var auto2 = { marka: "Volkswagen", model: "Golf", godina: 2018, boja: "plava" };
+
+    // Polje objekata
+    var objekti = [osoba1, osoba2, osoba3, auto1, auto2];
+
+    // Petlja za ispis vrijednosti i indeksa svakog objekta
+    for (var i = 0; i < objekti.length; i++) {
+      document.write("<strong>Objekt " + (i + 1) + ":</strong><br>");
+      for (var kljuc in objekti[i]) {
+        document.write(kljuc + ": " + objekti[i][kljuc] + "<br>");
+      }
+      document.write("<br>"); // Za razdvajanje objekata
+    }
+  </script>
+</body>
+</html>

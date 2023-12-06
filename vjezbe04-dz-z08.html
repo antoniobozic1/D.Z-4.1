@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Filtriranje Polja</title>
+</head>
+<body>
+  <script type="text/javascript">
+    function filtrirajPolje(arr) {
+  return arr.filter(function(element) {
+    var sadrziVelikoSlovo = false;
+    for (var i = 0; i < element.length; i++) {
+      var asciiVrijednost = element.charCodeAt(i);
+      if ((asciiVrijednost >= 65 && asciiVrijednost <= 90) || 
+          (asciiVrijednost >= 97 && asciiVrijednost <= 122)) {
+        if (element[i] === element[i].toUpperCase()) {
+          sadrziVelikoSlovo = true;
+          break;
+        }
+      }
+    }
+    return sadrziVelikoSlovo || element.length >= 5;
+  });
+}
+
+
+    var arr = ['Ovo', 'je', 'My', 'prvi', 'komad', 'OF', 'JAVASCRIPT', 'koda', 'Koji', 'je', 'proradio'];
+    var filtriranoPolje = filtrirajPolje(arr);
+
+    // Ispis filtriranog polja
+    document.write("Filtrirano polje: " + filtriranoPolje.join(', '));
+  </script>
+</body>
+</html>

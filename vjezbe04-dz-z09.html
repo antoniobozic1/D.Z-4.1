@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Savršeni brojevi</title>
+</head>
+<body>
+  <script type="text/javascript">
+    function ispisSavrsenihBrojeva(maxBroj) {
+      function jeSavrsen(broj) {
+        var sumaDjelitelja = 0;
+        for (var i = 1; i < broj; i++) {
+          if (broj % i === 0) {
+            sumaDjelitelja += i;
+          }
+        }
+        return sumaDjelitelja === broj;
+      }
+
+      for (var i = 1; i <= maxBroj; i++) {
+        if (jeSavrsen(i)) {
+          document.write(i + "<br>");
+        }
+      }
+    }
+
+    ispisSavrsenihBrojeva(1000); // Ispisuje sve savršene brojeve do 1000
+  </script>
+</body>
+</html>

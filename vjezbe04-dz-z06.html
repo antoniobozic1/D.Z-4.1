@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pas Reks</title>
+</head>
+<body>
+  <script type="text/javascript">
+    // Kreiranje objekta pas
+    var pas = {
+      ime: "Reks",
+      godine: 2
+    };
+
+    // Dodavanje funkcionalne osobine zvuk
+    pas.zvuk = function() {
+      return "AV AV!";
+    };
+
+    // Ispisivanje informacija o psu i testiranje funkcije zvuk
+    document.write("Ime psa: " + pas.ime + "<br>");
+    document.write("Godine psa: " + pas.godine + "<br>");
+    document.write("Pas kaže: " + pas.zvuk());
+  </script>
+</body>
+</html>
